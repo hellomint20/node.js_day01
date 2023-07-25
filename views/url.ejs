@@ -1,0 +1,8 @@
+<ul>
+    <%for(let i=0; i<url.length; i++){
+        let key = Object.keys(url[i]); 
+        let value = Object.values(url[i]);%> 
+        <li><a href="<%= value %>"><%= key %></a></li>     
+    <%}
+    %>
+</ul>

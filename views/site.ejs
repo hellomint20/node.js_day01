@@ -1,0 +1,24 @@
+<table border="1">
+     <% for(let i=0; i < site.length ; i++){%>
+     <tr>
+        <%for(let k=0; k < site[i].length ; k++){
+        var item = site[i][k];
+        if(i == 0 ){%>
+            <th><%= item %></th>
+        <%}else{
+            if(k == 0){%>
+                <th><%= item %></th>
+            <%}else if(k == 1){
+                var key = Object.keys(item);
+                var value = Object.values(item);
+            %>
+            <td><a href="<%= value %>"><%= key %></a></td>
+            <%}else{%>
+                <td><%= item %></td>
+            <%}
+            }
+        }
+         %>
+     </tr>
+     <%}%>
+    </table>
